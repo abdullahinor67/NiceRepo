@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spiderman Fans</title>
+    <script src="guestbook.js" type="application/javascript" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <header>
@@ -16,6 +18,7 @@
             <li>Noreen Si</li>
             <li>Lily Li</li>
             <li>Abdullahi Nor </li>
+            <li>Kaitlyn Thompson</li>
         </ul>
     </header>
     <img src="spiderman.png" alt="Spiderman">
@@ -34,24 +37,5 @@
             </tr>
         </tbody>
     </table>
-    <script>
-        const button = document.querySelector('button');
-        button.addEventListener('click', () => {
-            const input = document.querySelector('input');
-            const name = input.value;
-            const table = document.querySelector('table tbody');
-            const row = document.createElement('tr');
-            const cell = document.createElement('td');
-            cell.textContent = name;
-            row.appendChild(cell);
-            table.appendChild(row);
-            input.value = '';
-        });
-    </script>
-    <style>
-        table, tbody, td {
-            border: 1px solid black;
-        }
-    </style>
 </body>
 </html>
