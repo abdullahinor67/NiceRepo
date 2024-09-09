@@ -6,9 +6,6 @@
     <title>Spiderman Fans</title>
 </head>
 <body>
-<<<<<<< HEAD
-    
-=======
     <header>
         <h1>Authors:</h1>
         <ul>
@@ -22,6 +19,38 @@
     </header>
     <img src="spiderman.png" alt="Spiderman">
     <p>Spiderman got cake. He got the best bakery in Gotham, absolutely dragging that wagon. A fine specimen of dough.</p>
->>>>>>> 8ccd4a15a06cc480b5d6b32976aa9d132ec47c5c
+    <input type="text" placeholder="Enter your name">
+    <button>Add to Guesbook</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Spiderman</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click', () => {
+            const input = document.querySelector('input');
+            const name = input.value;
+            const table = document.querySelector('table tbody');
+            const row = document.createElement('tr');
+            const cell = document.createElement('td');
+            cell.textContent = name;
+            row.appendChild(cell);
+            table.appendChild(row);
+            input.value = '';
+        });
+    </script>
+    <style>
+        table, tbody, td {
+            border: 1px solid black;
+        }
+    </style>
 </body>
 </html>
